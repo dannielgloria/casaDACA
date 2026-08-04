@@ -9,11 +9,13 @@ const day = hour * 24;
 
 export function useCountdown(targetDate: string) {
   const target = useMemo(() => new Date(targetDate).getTime(), [targetDate]);
-  const [distance, setDistance] = useState(() =>
-    Math.max(target - Date.now(), 0)
-  );
+  const [distance, setDistance] = useState(0);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
+    setDistance(Math.max(target - Date.now(), 0));
+
     const interval = window.setInterval(() => {
       setDistance(Math.max(target - Date.now(), 0));
     }, 1000);
@@ -26,6 +28,7 @@ export function useCountdown(targetDate: string) {
     hours: Math.floor((distance % day) / hour),
     minutes: Math.floor((distance % hour) / minute),
     seconds: Math.floor((distance % minute) / second),
-    finished: distance === 0
+    finished: mounted && distance === 0,
+    mounted
   };
 }

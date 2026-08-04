@@ -21,29 +21,60 @@ const principles = [
 
 const gallery = [
   {
-    src: siteConfig.assets.hero,
-    alt: "Botella Casa DACA con agave y luz calida",
-    className: "md:col-span-7 md:row-span-2"
+    src: siteConfig.assets.heroHorizontal,
+    width: 1536,
+    height: 1024,
+    alt: "Botella Casa DACA en composicion horizontal con agave",
+    className: "md:col-span-8 md:row-span-2"
   },
   {
-    src: siteConfig.assets.label,
-    alt: "Etiqueta de mezcal Casa DACA",
-    className: "md:col-span-5"
-  },
-  {
-    src: siteConfig.assets.logoHorizontal,
-    alt: "Logotipo horizontal Casa DACA",
-    className: "md:col-span-5"
-  },
-  {
-    src: siteConfig.assets.isotipo,
-    alt: "Isotipo Casa DACA",
+    src: siteConfig.assets.bottleNeck,
+    width: 1254,
+    height: 1254,
+    alt: "Detalle del cuello de la botella Casa DACA",
     className: "md:col-span-4"
   },
   {
+    src: siteConfig.assets.pinaMaguey,
+    width: 1254,
+    height: 1254,
+    alt: "Pina de maguey y humo en Oaxaca",
+    className: "md:col-span-4"
+  },
+  {
+    src: siteConfig.assets.hero,
+    width: 1254,
+    height: 1254,
+    alt: "Botella Casa DACA con agave y luz calida",
+    className: "md:col-span-5"
+  },
+  {
+    src: siteConfig.assets.label,
+    width: 941,
+    height: 1672,
+    alt: "Etiqueta de mezcal Casa DACA",
+    className: "md:col-span-3"
+  },
+  {
+    src: siteConfig.assets.logoHorizontal,
+    width: 1774,
+    height: 887,
+    alt: "Logotipo horizontal Casa DACA",
+    className: "md:col-span-6"
+  },
+  {
+    src: siteConfig.assets.isotipo,
+    width: 1254,
+    height: 1254,
+    alt: "Isotipo Casa DACA",
+    className: "md:col-span-3"
+  },
+  {
     src: siteConfig.assets.logo,
+    width: 1774,
+    height: 887,
     alt: "Logotipo Casa DACA",
-    className: "md:col-span-8"
+    className: "md:col-span-3"
   }
 ];
 
@@ -134,8 +165,8 @@ function Essence() {
         </Reveal>
         <Reveal delay={0.12}>
           <ParallaxImage
-            src={siteConfig.assets.hero}
-            alt="Luz, agave y botella Casa DACA"
+            src={siteConfig.assets.pinaMaguey}
+            alt="Pina de maguey, humo y origen en Oaxaca"
             width={1254}
             height={1254}
             wrapperClassName="aspect-[4/5] border border-sand/10"
@@ -168,11 +199,11 @@ function Bottle() {
         <Reveal delay={0.16}>
           <div className="label-mask ml-auto max-h-[78vh] overflow-hidden border border-sand/10 bg-charcoal/25">
             <Image
-              src={siteConfig.assets.hero}
-              alt="Botella Casa DACA parcialmente revelada"
+              src={siteConfig.assets.bottleNeck}
+              alt="Detalle del cuello de la botella Casa DACA parcialmente revelado"
               width={1254}
               height={1254}
-              className="h-full w-full scale-125 object-cover object-[56%_45%]"
+              className="h-full w-full scale-110 object-cover object-[58%_38%]"
               sizes="(max-width: 1024px) 100vw, 48vw"
             />
           </div>
@@ -246,6 +277,16 @@ function SmallBatches() {
             </Reveal>
           ))}
         </div>
+        <Reveal delay={0.18} className="mt-16">
+          <Image
+            src={siteConfig.assets.pinaMaguey}
+            alt="Pina de maguey como origen del mezcal Casa DACA"
+            width={1254}
+            height={1254}
+            className="aspect-[16/6] w-full border border-sand/10 object-cover object-[42%_52%] opacity-82"
+            sizes="100vw"
+          />
+        </Reveal>
       </div>
     </section>
   );
@@ -254,15 +295,25 @@ function SmallBatches() {
 function Story() {
   return (
     <section className="px-6 py-28 md:py-44">
-      <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-[0.8fr_1.2fr]">
+      <div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-[0.86fr_1.14fr] lg:items-center">
         <Reveal>
-          <Image
-            src={siteConfig.assets.isotipo}
-            alt=""
-            width={1254}
-            height={1254}
-            className="h-auto w-44 opacity-70"
-          />
+          <div className="relative">
+            <Image
+              src={siteConfig.assets.heroHorizontal}
+              alt="Botella Casa DACA en luz baja con agave y barro"
+              width={1536}
+              height={1024}
+              className="aspect-[4/5] w-full border border-sand/10 object-cover object-[48%_50%]"
+              sizes="(max-width: 1024px) 100vw, 44vw"
+            />
+            <Image
+              src={siteConfig.assets.isotipo}
+              alt=""
+              width={1254}
+              height={1254}
+              className="absolute -bottom-8 left-8 h-auto w-24 opacity-70 md:w-32"
+            />
+          </div>
         </Reveal>
         <Reveal delay={0.12}>
           <p className="text-xs uppercase tracking-ritual text-bronze/80">
@@ -306,8 +357,8 @@ function Gallery() {
                 <Image
                   src={image.src}
                   alt={image.alt}
-                  width={image.src === siteConfig.assets.label ? 941 : 1254}
-                  height={image.src === siteConfig.assets.label ? 1672 : 1254}
+                  width={image.width}
+                  height={image.height}
                   className="h-full w-full object-cover opacity-88 transition duration-700 hover:scale-[1.03] hover:opacity-100"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
@@ -356,10 +407,10 @@ function InstagramSection() {
         </Button>
         <div className="md:col-span-2">
           <Image
-            src={siteConfig.assets.hero}
+            src={siteConfig.assets.heroHorizontal}
             alt="Historia de Instagram Casa DACA"
-            width={1254}
-            height={1254}
+            width={1536}
+            height={1024}
             className="aspect-[16/7] w-full border border-sand/10 object-cover"
             sizes="100vw"
           />

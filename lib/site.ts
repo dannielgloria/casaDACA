@@ -26,6 +26,9 @@ export const siteConfig = {
     logo: "/assets/logotipo.png",
     logoHorizontal: "/assets/logotipo-horizontal.png",
     hero: "/assets/historia-instagram.png",
+    heroHorizontal: "/assets/historia-instagram-horizontal.png",
+    bottleNeck: "/assets/cuello-botella.png",
+    pinaMaguey: "/assets/pina-maguey.png",
     label: "/assets/etiqueta.png"
   }
 } as const;
