@@ -118,7 +118,7 @@ function Hero() {
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-6 text-center">
         <Reveal>
           <Image
-            src={siteConfig.assets.logoHorizontal}
+            src={siteConfig.assets.isotipo}
             alt="Casa DACA Mezcal"
             width={900}
             height={450}
