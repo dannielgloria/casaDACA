@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --ink: #111111;
+  --charcoal: #1E1E1E;
+  --sand: #E7DCC8;
+  --bronze: #C8AE7D;
+  --earth: #4A3627;
+  --agave: #233025;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--ink);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at 78% 12%, rgba(35, 48, 37, 0.38), transparent 30rem),
+    linear-gradient(180deg, #070707 0%, var(--ink) 42%, #0d0c0b 100%);
+  color: var(--sand);
+  font-family: var(--font-inter), Inter, sans-serif;
+  cursor: default;
+}
+
+body::selection {
+  background: rgba(200, 174, 125, 0.28);
+  color: var(--sand);
+}
+
+img {
+  user-select: none;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (min-width: 1024px) and (pointer: fine) {
+  body {
+    cursor: none;
+  }
+
+  a,
+  button,
+  input {
+    cursor: none;
+  }
+}
+
+.noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 60;
+  opacity: 0.035;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 3px 3px;
+  mix-blend-mode: soft-light;
+}
+
+.label-mask {
+  mask-image: linear-gradient(to bottom, transparent 0%, black 18%, black 82%, transparent 100%);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
