@@ -18,7 +18,7 @@ Copia `.env.example` a `.env.local` y ajusta:
 ```bash
 NEXT_PUBLIC_SITE_URL=https://casadaca.com
 NEXT_PUBLIC_LAUNCH_DATE=2026-12-12T20:00:00-06:00
-NEXT_PUBLIC_INSTAGRAM_URL=https://www.instagram.com/casadaca
+NEXT_PUBLIC_INSTAGRAM_URL=https://www.instagram.com/casa_daca_?igsh=eG1wbW9ycjduOGg3
 NEWSLETTER_PROVIDER=console
 ```
 

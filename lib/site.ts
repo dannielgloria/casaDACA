@@ -8,7 +8,7 @@ export const siteConfig = {
     process.env.NEXT_PUBLIC_LAUNCH_DATE ?? "2026-12-12T20:00:00-06:00",
   instagramUrl:
     process.env.NEXT_PUBLIC_INSTAGRAM_URL ??
-    "https://www.instagram.com/casadaca",
+    "https://www.instagram.com/casa_daca_?igsh=eG1wbW9ycjduOGg3",
   keywords: [
     "Casa DACA",
     "mezcal artesanal",
@@ -24,9 +24,9 @@ export const siteConfig = {
     favicon: "/favicon.png",
     isotipo: "/assets/isotipo.png",
     logo: "/assets/logotipo.png",
-    logoHorizontal: "/assets/logotipo-horizontal.png",
+    logoHorizontal: "/assets/logotipo_horizontal.png",
     hero: "/assets/historia-instagram.png",
-    backgroundHome: "/assets/background-home.png",
+    backgroundHome: "/assets/background_wo_mezcal.png",
     heroHorizontal: "/assets/historia-instagram-horizontal.png",
     bottleNeck: "/assets/cuello-botella.png",
     pinaMaguey: "/assets/pina-maguey.png",

@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   outputFileTracingRoot: process.cwd(),
   poweredByHeader: false,
   reactStrictMode: true,
+  allowedDevOrigins: ["192.168.100.26"],
   images: {
     formats: ["image/avif", "image/webp"]
   }

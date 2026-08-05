@@ -15,8 +15,8 @@ export function useMagneticCursor() {
 
     const move = (event: PointerEvent) => {
       gsap.to(cursor, {
-        x: event.clientX,
-        y: event.clientY,
+        left: event.clientX,
+        top: event.clientY,
         duration: 0.45,
         ease: "power3.out"
       });
