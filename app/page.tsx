@@ -107,7 +107,7 @@ function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden" aria-label="Casa DACA">
       <Image
-        src={siteConfig.assets.hero}
+        src={siteConfig.assets.backgroundHome}
         alt="Casa DACA Mezcal artesanal en Oaxaca"
         fill
         priority
